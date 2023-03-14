@@ -5,19 +5,19 @@ class Disciplina {
         this._alunos = [];
     }
 
-    get codigo () {
+    get codigo() {
         return this._codigo;
     }
 
-    set codigo (novoCodigo) {
+    set codigo(novoCodigo) {
         this._codigo = novoCodigo;
     }
 
-    get nome () {
+    get nome() {
         return this._nome;
     }
 
-    set nome (novoNome) {
+    set nome(novoNome) {
         this._nome = novoNome;
     }
 }
