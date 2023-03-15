@@ -25,5 +25,3 @@ class DisciplinaServico {
         	this.repositorio.buscarPorCodigoOuNome(busca)
     }
 }
-console.log(1)
-const disciplina = new AlunoServico();

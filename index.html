@@ -5,10 +5,16 @@
     <title>Title</title>
 </head>
 <body>
+    <h2>Criar aluno</h2>
     Nome: <input id="nome"> <br>
     Idade: <input id="idade"> <br>
-
     <button onclick="alunoControlador.inserir()">Inserir</button>
+
+    <h2>Criar disciplina</h2>
+    Nome: <input id="nomeDisciplina"> <br>
+    Código: <input id="codigoDisciplina"> <br>
+    <button onclick="disciplinaControlador.inserir()">Inserir</button>
+
 
     <h1>Listagem de Alunos</h1>
     <p>Nome - Idade</p>
@@ -18,5 +24,8 @@
     <script src="js/servico/aluno-servico.js"></script>
     <script src="js/controller/aluno-controlador.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/model/disciplina.js"></script>
+    <script src="js/repositorio/disciplina-repositorio.js"></script>
+    <script src="js/servico/disciplina-servico.js"></script>
 </body>
 </html>
