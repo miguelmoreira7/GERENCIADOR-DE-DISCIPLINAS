@@ -5,12 +5,20 @@ class DisciplinaServico {
 
     inserir(codigo, nome) {
         const novaDisciplina = new Disciplina(codigo, nome);
-        if(novaDisciplina._codigo === this.repositorio.filter(disciplina => disciplina._codigo === codigo)) {
-            console.log("código de disciplina inserido já existente, tente outro código");
+        console.log(novaDisciplina._codigo)
+        if(this.repositorio.disciplinas){
+            console.log("alo")
+            if(novaDisciplina._codigo === this.repositorio.disciplinas.filter(disciplina => disciplina._codigo === codigo)._codigo) {
+                console.log("código de disciplina inserido já existente, tente outro código");
+            }
+            else {
+                this.repositorio.inserir(novaDisciplina);
+            }
         }
         else {
             this.repositorio.inserir(novaDisciplina);
         }
+        return novaDisciplina;
     }
 
     remover(codigo) {
