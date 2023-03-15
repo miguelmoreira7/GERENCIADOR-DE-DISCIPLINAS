@@ -1,4 +1,4 @@
-class AlunoServico {
+export class AlunoServico {
     constructor() {
         this.repositorio = new AlunoRepositorio();
     }

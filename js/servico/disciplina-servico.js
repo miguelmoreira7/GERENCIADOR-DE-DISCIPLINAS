@@ -26,4 +26,4 @@ class DisciplinaServico {
     }
 }
 console.log(1)
-const disciplina = new DisciplinaServico();
+const disciplina = new AlunoServico();
