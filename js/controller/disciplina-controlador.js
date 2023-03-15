@@ -18,7 +18,17 @@ class DisciplinaControlador {
 
         const elementoBotaoApagar = document.createElement("button");
         elementoBotaoApagar.textContent = "X";
+
+        elementoBotaoApagar.addEventListener("click", (event) => {
+            this.removerDisciplinaDaLista(codigoDisciplina);
+            event.target.parentElement.remove();
+            }
+        );
         elementoD.appendChild(elementoBotaoApagar);
         document.body.appendChild(elementoD);
+    }
+
+    removerDisciplinaDaLista(codigo) {
+        this.disciplinaservico.remover(codigo);
     }
 }
