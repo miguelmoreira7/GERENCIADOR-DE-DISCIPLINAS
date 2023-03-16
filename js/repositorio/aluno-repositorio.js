@@ -18,6 +18,7 @@ class AlunoRepositorio {
     }
 
     buscarPorNome(nome) {
-        return this._alunos.filter(aluno => aluno.nome === nome);
+        console.log(this._alunos.find(aluno => aluno.nome === nome));
+        return this._alunos.find(aluno => aluno.nome === nome);
     }
 }

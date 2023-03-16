@@ -6,7 +6,6 @@ class DisciplinaControlador {
     inserir() {
         const nomeDisciplina = document.querySelector("#nomeDisciplina").value;
         const codigoDisciplina = Number(document.querySelector("#codigoDisciplina").value);
-        console.log(nomeDisciplina, codigoDisciplina);
         const disciplina = this.disciplinaservico.inserir(codigoDisciplina, nomeDisciplina);
         if(disciplina) {
             this.mostrarDisciplinaNoHtml(nomeDisciplina, codigoDisciplina);
@@ -30,5 +29,14 @@ class DisciplinaControlador {
 
     removerDisciplinaDaLista(codigo) {
         this.disciplinaservico.remover(codigo);
+    }
+
+    buscar(disciplina) {
+        this.disciplinaservico.buscar(disciplina);
+    }
+
+    inserirAluno(aluno, disciplina) {
+        this.disciplinaservico.adicionarAluno(aluno, disciplina);
+        console.log("alo")
     }
 }

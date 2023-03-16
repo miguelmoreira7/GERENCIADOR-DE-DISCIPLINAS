@@ -21,6 +21,6 @@ class AlunoServico {
     }
 
     buscarPorNome(nome) {
-        return this.repositorio.buscarPorNome(nome);
+        this.repositorio.buscarPorNome(nome);
     }
 }

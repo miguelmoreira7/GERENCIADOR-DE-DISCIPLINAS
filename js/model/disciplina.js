@@ -19,5 +19,11 @@ class Disciplina {
 
     set nome(novoNome) {
         this._nome = novoNome;
+
     }
+    
+    get alunos() {
+        return this._alunos;
+    }
+
 }

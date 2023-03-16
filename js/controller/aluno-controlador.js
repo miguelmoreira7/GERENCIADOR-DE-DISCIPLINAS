@@ -35,6 +35,10 @@ class AlunoControlador {
         this.alunoServico.remover(nome);
     }
 
+    buscarAluno(aluno) {
+        console.log("alo")
+        this.alunoServico.buscarPorNome(aluno);
+    }
 }
 
 //

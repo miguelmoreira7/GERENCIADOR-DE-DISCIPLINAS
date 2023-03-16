@@ -8,7 +8,7 @@ class DisciplinaServico {
         if(this.repositorio._disciplinas[0]){
             const verificar = this.repositorio._disciplinas.find(disciplina => disciplina._codigo === codigo);
             if(verificar) {
-                console.log("código de disciplina inserido já existente, tente outro código");
+                alert("código de disciplina inserido já existente, tente outro código");
                 return;
             }
             else {
@@ -31,5 +31,10 @@ class DisciplinaServico {
 
     buscar(busca) {
         	this.repositorio.buscarPorCodigoOuNome(busca)
+    }
+
+    adicionarAluno(aluno, disciplina) {
+        this.repositorio.adicionarAluno(aluno, disciplina);
+        console.log("alo2")
     }
 }

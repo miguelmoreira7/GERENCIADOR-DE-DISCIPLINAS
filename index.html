@@ -8,12 +8,17 @@
     <h2>Criar aluno</h2>
     Nome: <input id="nome"> <br>
     Idade: <input id="idade"> <br>
-    <button onclick="alunoControlador.inserir()">Inserir</button>
+    <button onclick="gerenciador.inserirAluno()">Inserir</button>
 
     <h2>Criar disciplina</h2>
     Nome: <input id="nomeDisciplina"> <br>
     Código: <input id="codigoDisciplina"> <br>
-    <button onclick="disciplinaControlador.inserir()">Inserir</button>
+    <button onclick="gerenciador.inserirDisciplina()">Inserir</button>
+
+    <h2>Adicionar aluno em disciplina</h2>
+    Nome do aluno: <input id="nomeAluno"> <br>
+    Nome ou código da disciplina: <input id="nomeOuCodigo"> <br>
+    <button onclick="gerenciador.inserirAlunoEmDisciplina()">Inserir</button>
 
 
     <h1>Listagem de Alunos</h1>
@@ -27,6 +32,7 @@
     <script src="js/repositorio/disciplina-repositorio.js"></script>
     <script src="js/servico/disciplina-servico.js"></script>
     <script src="js/controller/disciplina-controlador.js"></script>
+    <script src="js/controller/gerenciador.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

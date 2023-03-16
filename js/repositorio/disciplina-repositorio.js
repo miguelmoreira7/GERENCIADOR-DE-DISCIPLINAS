@@ -18,8 +18,8 @@ class DisciplinaRepositorio {
     }
 
     buscarPorCodigoOuNome(busca) {
-        const nome = this._disciplinas.filter(disciplina => disciplina._nome === busca);
-        const codigo = this._disciplinas.filter(disciplina => disciplina._codigo === busca);
+        const nome = this._disciplinas.find(disciplina => disciplina._nome === busca);
+        const codigo = this._disciplinas.find(disciplina => disciplina._codigo === busca);
         if(nome) {
             return nome; 
         }
@@ -27,7 +27,18 @@ class DisciplinaRepositorio {
             return codigo;
         }
         else {
-            console.log("a disciplina não existe")
+            alert("a disciplina não existe")
         }
-    } 
+    }
+    
+    adicionarAluno(aluno, nomeOuCoD) {
+        const disciplina = this.buscarPorCodigoOuNome(nomeOuCoD);
+        if (disciplina) {
+            disciplina._alunos.push(aluno);
+            console.log("alo3");
+        }
+        else {
+            return
+        }
+    }
 }
